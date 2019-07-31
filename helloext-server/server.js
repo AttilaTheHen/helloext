@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const http = require('http');
 
 app.use(morgan('dev'));
+app.use(express.static('../helloext-app'));
 app.use(express.json());
 
 app.use((req, res) => {
