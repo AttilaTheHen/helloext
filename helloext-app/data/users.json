@@ -1,7 +1,17 @@
 {
     "success": true,
     "users": [
-        {"id": 1, "name": "Ed",    "email": "ed@sencha.com"},
-        {"id": 2, "name": "Tommy", "email": "tommy@sencha.com"}
+        {
+            "id": 1,
+            "name": "Ed",
+            "email": "ed@sencha.com",
+            "phone": "555-555-5555"
+        },
+        {
+            "id": 2,
+            "name": "Tommy",
+            "email": "tommy@sencha.com",
+            "phone": "555-555-5556"
+        }
     ]
 }
