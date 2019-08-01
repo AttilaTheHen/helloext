@@ -14,6 +14,6 @@ Ext.define('AM.controller.Title', {
     },
 
     onPanelRendered: function() {
-        console.log('Title panel rendered!');
+        
     }
 });
