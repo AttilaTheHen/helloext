@@ -7,10 +7,10 @@ Ext.define('AM.view.title.Header', {
     initComponent: function() {
         this.items = [
             {
-                title: 'Collapsed Panel',
+                title: 'Title Panel',
                 collapsed: false,
                 collapsible: true,
-                html: 'jfdkslfjlksdjf',
+                html: 'This is the title panel. Woo!',
                 height: 160
             }
         ];
