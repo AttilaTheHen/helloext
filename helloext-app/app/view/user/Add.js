@@ -1,8 +1,8 @@
-Ext.define('AM.view.user.Edit', {
+Ext.define('AM.view.user.Add', {
     extend: 'Ext.window.Window',
-    alias: 'widget.useredit',
+    alias: 'widget.useradd',
 
-    title: 'Edit User',
+    title: 'Add User',
     layout: 'fit',
     autoShow: true,
 
@@ -32,8 +32,8 @@ Ext.define('AM.view.user.Edit', {
 
         this.buttons = [
             {
-                text: 'Save',
-                action: 'save'
+                text: 'Add',
+                action: 'add'
             },
             {
                 text: 'Cancel',

@@ -7,6 +7,7 @@ Ext.define('AM.controller.Users', {
     views: [
         'user.List',
         'user.Edit',
+        'user.Add',
     ],
 
     init: function() {
@@ -16,6 +17,12 @@ Ext.define('AM.controller.Users', {
             },
             'useredit button[action=save]': {
                 click: this.updateUser
+            },
+            '#addUserButton': {
+                click: this.addUser
+            },
+            'useradd button[action=add]': {
+                click: this.createUser
             }
         });
     },
@@ -37,5 +44,20 @@ Ext.define('AM.controller.Users', {
 
         // synchronize the store after editing the record
         this.getUsersStore().sync();
+    },
+
+    addUser: function() {
+        var view = Ext.widget('useradd');
+        view.down('form').add({ name: '', email: '', phone: '' });
+    },
+
+    createUser: function(button) {
+        var win = button.up('window');
+        var form = win.down('form');
+        var values = form.getValues();
+
+        this.getUsersStore().add(values);
+
+        win.close();
     }
 });
