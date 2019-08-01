@@ -4,6 +4,15 @@ Ext.define('AM.view.user.List', {
 
     title: 'All Users',
 
+    tools: [
+        {
+            type: 'plus',
+            itemId: 'addUserButton',
+            iconCls: 'icon-add',
+            text: 'Add User'
+        }
+    ],
+
     store: 'Users',
 
     initComponent: function() {

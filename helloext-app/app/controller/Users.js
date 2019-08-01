@@ -16,6 +16,9 @@ Ext.define('AM.controller.Users', {
             },
             'useredit button[action=save]': {
                 click: this.updateUser
+            },
+            '#addUserButton': {
+                click: this.onAddUserButton
             }
         });
     },
@@ -37,5 +40,9 @@ Ext.define('AM.controller.Users', {
 
         // synchronize the store after editing the record
         this.getUsersStore().sync();
+    },
+
+    onAddUserButton: function(button) {
+        console.log('Add User button clicked!');
     }
 });
