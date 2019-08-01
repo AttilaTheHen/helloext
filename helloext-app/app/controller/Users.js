@@ -7,6 +7,7 @@ Ext.define('AM.controller.Users', {
     views: [
         'user.List',
         'user.Edit',
+        'user.Add',
     ],
 
     init: function() {
@@ -18,7 +19,10 @@ Ext.define('AM.controller.Users', {
                 click: this.updateUser
             },
             '#addUserButton': {
-                click: this.onAddUserButton
+                click: this.addUser
+            },
+            'useradd button[action=add]': {
+                click: this.createUser
             }
         });
     },
@@ -42,7 +46,9 @@ Ext.define('AM.controller.Users', {
         this.getUsersStore().sync();
     },
 
-    onAddUserButton: function(button) {
+    addUser: function(button) {
         console.log('Add User button clicked!');
+        var view = Ext.widget('useradd');
+        view.down('form').add({});
     }
 });
