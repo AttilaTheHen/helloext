@@ -46,9 +46,19 @@ Ext.define('AM.controller.Users', {
         this.getUsersStore().sync();
     },
 
-    addUser: function(button) {
+    addUser: function(grid, record) {
         console.log('Add User button clicked!');
         var view = Ext.widget('useradd');
-        view.down('form').add({});
+        view.down('form').add({ name: '', email: '', phone: '' });
+    },
+
+    createUser: function(button) {
+        var win = button.up('window');
+        var form = win.down('form');
+        var values = form.getValues();
+
+        this.getUsersStore().add(values);
+
+        win.close();
     }
 });
