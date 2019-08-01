@@ -46,7 +46,7 @@ Ext.define('AM.controller.Users', {
         this.getUsersStore().sync();
     },
 
-    addUser: function(grid, record) {
+    addUser: function() {
         var view = Ext.widget('useradd');
         view.down('form').add({ name: '', email: '', phone: '' });
     },
