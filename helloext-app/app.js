@@ -6,12 +6,15 @@ Ext.application({
 
     controllers: [
         'Users',
+        'Title'
     ],
 
     launch: function() {
         Ext.create('Ext.container.Viewport', {
-            layout: 'fit',
             items: [
+                {
+                    xtype: 'titleheader'
+                },
                 {
                     xtype: 'userlist',
                 }
