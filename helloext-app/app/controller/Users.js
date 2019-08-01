@@ -47,7 +47,6 @@ Ext.define('AM.controller.Users', {
     },
 
     addUser: function(grid, record) {
-        console.log('Add User button clicked!');
         var view = Ext.widget('useradd');
         view.down('form').add({ name: '', email: '', phone: '' });
     },
