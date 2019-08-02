@@ -1,12 +1,12 @@
-const app = require('../app');
+const router = require('express').Router();
 const client = require('../../db-client');
 
-app.get('/api/users', (req, res, next) => {
+module.exports = router.get('/', (req, res, next) => {
     client.query(`
         SELECT * FROM users;
     `)
         .then(result => {
-            res.sendStatus(result.rows);
+            res.send(result.rows);
         })
         .catch(next);
 });
