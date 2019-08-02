@@ -57,6 +57,7 @@ Ext.define('AM.controller.Users', {
         var values = form.getValues();
 
         this.getUsersStore().add(values);
+        this.getUsersStore().sync();
 
         win.close();
     }

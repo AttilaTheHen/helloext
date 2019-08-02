@@ -7,13 +7,16 @@ Ext.define('AM.store.Users', {
         type: 'ajax',
         api: {
             read: '/api/users',
-            create: 'data/updateUsers.json',
-            update: 'data/updateUsers.json'
+            create: '/api/users',
         },
         reader: {
             type: 'json',
             root: 'users',
             successProperty: 'success'
+        },
+        writer: {
+            type: 'json',
+            writeAllFields: false
         }
     }
 });
