@@ -10,7 +10,7 @@ Ext.define('AM.view.user.Detail', {
         this.items = [
             {
                 title: 'User Detail',
-                html: 'This is user detail',
+                html: 'This is user ' + name,
                 height: 320
             }
         ];

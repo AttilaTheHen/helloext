@@ -8,6 +8,7 @@ Ext.define('AM.controller.Users', {
         'user.List',
         'user.Edit',
         'user.Add',
+        'user.Detail'
     ],
 
     init: function() {
@@ -23,6 +24,9 @@ Ext.define('AM.controller.Users', {
             },
             'useradd button[action=add]': {
                 click: this.createUser
+            },
+            'viewport > userlist': {
+                itemclick: this.viewUser
             }
         });
     },
@@ -60,5 +64,11 @@ Ext.define('AM.controller.Users', {
         this.getUsersStore().sync();
 
         win.close();
+    },
+
+    viewUser: function(grid, record) {
+        console.log('viewing user!', record);
+        // var view = Ext.widget('userdetail');
+        // console.log('this view?', view.down().loadRecord(record.name));
     }
 });

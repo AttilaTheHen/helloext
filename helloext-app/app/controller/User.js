@@ -14,6 +14,6 @@ Ext.define('AM.controller.User', {
     },
 
     onPanelRendered: function() {
-        
+
     }
 });
