@@ -26,4 +26,17 @@ module.exports = router
                 res.send(result.rows[0]);
             })
             .catch(next);
+    })
+
+    .get('/:id', (req, res, next) => {
+        client.query(`
+            SELECT id, name, email
+            FROM users
+            WHERE users.id = $1;
+        `,
+        [req.params.id])
+            .then(result => {
+                res.send(result.rows[0]);
+            })
+            .catch(next);
     });

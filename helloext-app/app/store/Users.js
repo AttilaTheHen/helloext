@@ -13,10 +13,6 @@ Ext.define('AM.store.Users', {
             type: 'json',
             root: 'users',
             successProperty: 'success'
-        },
-        writer: {
-            type: 'json',
-            writeAllFields: false
         }
     }
 });
