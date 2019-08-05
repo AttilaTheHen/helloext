@@ -6,7 +6,8 @@ Ext.application({
 
     controllers: [
         'Users',
-        'Title'
+        'Title',
+        'User'
     ],
 
     launch: function() {
@@ -16,7 +17,10 @@ Ext.application({
                     xtype: 'titleheader'
                 },
                 {
-                    xtype: 'userlist',
+                    xtype: 'userlist'
+                },
+                {
+                    xtype: 'userdetail'
                 }
             ]
         });

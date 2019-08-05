@@ -4,10 +4,12 @@ Ext.define('AM.store.Users', {
     autoLoad: true,
 
     proxy: {
-        type: 'ajax',
+        type: 'rest',
         api: {
-            read: '/api/users',
             create: '/api/users',
+            read: '/api/users',
+            update: '/api/users',
+            destroy: '/api/users'
         },
         reader: {
             type: 'json',
